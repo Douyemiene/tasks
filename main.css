@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Spartan", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  flex-direction: column;
+  background: antiquewhite;
+  padding: 2rem 1rem;
+  border-radius: 0.2rem;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#addButton {
+  background: antiquewhite;
+  margin-left: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+ul#task-container {
+  list-style-type: none;
+  background: white;
+  font-size: 24px;
+  padding: 2rem 1rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  min-height: 75%;
+}
+
+input[type="text"] {
+  width: 100%;
+  align-self: flex-start;
+  border-radius: 0.3rem;
+  padding: 0.25rem 2rem;
+}
+
+[data-todo-item]::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 0.5rem;
+  border-radius: 7.5px;
+  border: 2px solid black;
+  background-color: antiquewhite;
+}
+
+[data-todo-item="completed"] {
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 1028px) {
+  section {
+    height: 75vh;
+  }
+}
